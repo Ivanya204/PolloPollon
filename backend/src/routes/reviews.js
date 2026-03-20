@@ -3,11 +3,11 @@ import reviewsController from "../controller/reviewsController.js"
 
 const router = express.Router()
 router.route("/")
-.get()
-.post()
+.get(reviewsController.getReviews)
+.post(reviewsController.insertReviews)
 
 router.route("/:id")
-.put()
-.delete()
+.put(reviewsController.updateReview)
+.delete(reviewsController.deleteReview)
 
 export default router
