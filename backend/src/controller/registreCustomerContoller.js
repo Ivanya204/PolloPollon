@@ -9,6 +9,7 @@ import { config } from "../../config.js";
 
 const registreCustomerController = {};
 
+//para verificar el codigo es con vereficationCodeRequest
 registreCustomerController.register = async (req, res) => {
   const {
     name,
@@ -101,7 +102,7 @@ registreCustomerController.verifyCode = async (req, res) => {
     const {email, verificationCode: storedCode} = decoded
 
     //comparar el codigo que el usuario escribe con el codigo que esta en el token
-    if (vereficationCodeRequest !== storedCode) {
+    if (vereficationCodeRequest !== storedCode) { 
       return res.status(400).json({ message: "Invalid code" });
     }
     //si el codigo esta bien, entonces, colocamos el campo isVerified en true
