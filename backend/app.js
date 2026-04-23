@@ -8,6 +8,7 @@ import routerCustomer from "./src/routes/customers.js"
 import routerRegisterCustomer from "./src/routes/registerCustomer.js"
 import routerLoginCustomer from "./src/routes/loginCustomer.js";
 import routerLogout from "./src/routes/logout.js"
+import recoveryPasswordRoutes from "./src/routes/recoveryPassword.js";
 import cookieParser from "cookie-parser";
 
 //ejecutar express
@@ -26,5 +27,6 @@ app.use("/api/customers", routerCustomer)
 app.use("/api/registreCustomers", routerRegisterCustomer)
 app.use("/api/loginCustomers",routerLoginCustomer )
 app.use("/api/logout", routerLogout)
+app.use("/api/recoveryPassword", recoveryPasswordRoutes)
 
 export default app;
