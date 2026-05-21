@@ -9,7 +9,9 @@ import routerRegisterCustomer from "./src/routes/registerCustomer.js"
 import routerLoginCustomer from "./src/routes/loginCustomer.js";
 import routerLogout from "./src/routes/logout.js"
 import recoveryPasswordRoutes from "./src/routes/recoveryPassword.js";
+import routerBanner from "./src/routes/banners.js"
 import cookieParser from "cookie-parser";
+import cors from "cors"
 import limiter from "./src/middlewares/limiter.js";
 
 //ejecutar express
@@ -35,5 +37,6 @@ app.use("/api/registreCustomers", routerRegisterCustomer)
 app.use("/api/loginCustomers", routerLoginCustomer )
 app.use("/api/logout",  routerLogout)
 app.use("/api/recoveryPassword", recoveryPasswordRoutes)
+app.use("/api/banners", routerBanner)
 
 export default app;
